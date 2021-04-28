@@ -1,2 +1,2 @@
 # custemer-api
- api in Java with Gradle and Spark
+ Api in Java with Gradle and Spark
