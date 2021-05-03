@@ -35,7 +35,7 @@ public class AddressController {
                     int customerID = Integer.parseInt(req.params(":customerID"));
                     Address address = objectMapper.readValue(req.body(), Address.class);
                     address.setCustomerID(customerID);
-                    addressService.createAddress(address);
+                    this.addressService.createAddress(address);
                     res.status(201);
                     return address;
                 } catch (Exception e) {

@@ -29,23 +29,23 @@ public class Persistence {
         }
     }
 
-    protected static void close() throws SQLException {
-        if(con != null)
-            con.close();
-        if(preparedStatement != null)
-            preparedStatement.close();
-        if(result != null)
-            result.close();
+    protected final void close() throws SQLException {
+        if(this.con != null)
+            this.con.close();
+        if(this.preparedStatement != null)
+            this.preparedStatement.close();
+        if(this.result != null)
+            this.result.close();
     }
 
     protected Connection connected() throws SQLException {
-        return DriverManager.getConnection(url, uname, password);
+        return DriverManager.getConnection(this.url, this.uname, this.password);
     }
 
     protected void preparementGet(String query) {
         try {
-            con = this.connected();
-            preparedStatement = con.prepareStatement(query);
+            this.con = this.connected();
+            this.preparedStatement = this.con.prepareStatement(query);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -53,14 +53,14 @@ public class Persistence {
     }
 
     protected void preparementUpdate(String query) throws SQLException {
-        con = this.connected();
-        preparedStatement = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+        this.con = this.connected();
+        this.preparedStatement = this.con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
     }
 
     protected void executeUpdate() {
         try {
-            preparedStatement.executeUpdate();
-            result = preparedStatement.getGeneratedKeys();
+            this.preparedStatement.executeUpdate();
+            this.result = this.preparedStatement.getGeneratedKeys();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -68,6 +68,6 @@ public class Persistence {
     }
 
     protected void get() throws SQLException {
-        result = preparedStatement.executeQuery();
+        this.result = this.preparedStatement.executeQuery();
     }
 }

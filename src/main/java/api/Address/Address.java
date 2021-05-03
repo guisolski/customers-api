@@ -14,7 +14,7 @@ public class Address {
     }
 
     public String getState() {
-        return state;
+        return this.state;
     }
 
     public void setState(String state) {
@@ -22,7 +22,7 @@ public class Address {
     }
 
     public String getCity() {
-        return city;
+        return this.city;
     }
 
     public void setCity(String city) {
@@ -38,7 +38,7 @@ public class Address {
     }
 
     public String getStreet() {
-        return street;
+        return this.street;
     }
 
     public void setStreet(String street) {
@@ -46,7 +46,7 @@ public class Address {
     }
 
     public String getAdditionalInformation() {
-        return additionalInformation;
+        return this.additionalInformation;
     }
 
     public void setAdditionalInformation(String additionalInformation) {
@@ -54,7 +54,7 @@ public class Address {
     }
 
     public Boolean getMain() {
-        return main;
+        return this.main;
     }
 
     public void setMain(Boolean main) {
@@ -62,7 +62,7 @@ public class Address {
     }
 
     public int getNumber() {
-        return number;
+        return this.number;
     }
 
     public void setNumber(int number) {
@@ -70,7 +70,7 @@ public class Address {
     }
 
     public String getZipCode() {
-        return zipCode;
+        return this.zipCode;
     }
 
     public void setZipCode(String zipCode) {
@@ -78,7 +78,7 @@ public class Address {
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
@@ -86,7 +86,7 @@ public class Address {
     }
 
     public int getCustomerID() {
-        return customerID;
+        return this.customerID;
     }
 
     public void setCustomerID(int customerID) {
@@ -94,7 +94,7 @@ public class Address {
     }
 
     public TimeStamp getTimeStamp() {
-        return timeStamp;
+        return this.timeStamp;
     }
 
     public void setTimeStamp(TimeStamp timeStamp) {

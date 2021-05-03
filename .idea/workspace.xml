@@ -5,26 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31a9f9b5-1b36-4e31-a5f2-d493173a7055" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/Address/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/Address/AddressController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/Address/AddressPersistence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/Address/AddressService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/Customer/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/Customer/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/Customer/CustomerPersistence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/Customer/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/Persistence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/util/JsonUntil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/util/TimeStamp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Create_customer_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V3__Create_address_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Router.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/Address/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/Address/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/Address/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/Address/AddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/Address/AddressPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/Address/AddressPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/Customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/Customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/Customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/Customer/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/Customer/CustomerPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/Customer/CustomerPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/Persistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/Persistence.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

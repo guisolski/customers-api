@@ -21,7 +21,7 @@ public class CustomerController {
         path("/customers", () -> {
             //get all customers
             get("", (req, res) -> {
-                ArrayList<Customer> customers =  customerService.getAllCustomers(req.queryMap().toMap());
+                ArrayList<Customer> customers =  this.customerService.getAllCustomers(req.queryMap().toMap());
                 return  customers;
             }, json());
             //add new customer
@@ -29,7 +29,7 @@ public class CustomerController {
                 try {
                     String body = req.body().replace("address","mainAddress");
                     Customer customer = objectMapper.readValue(body, Customer.class);
-                    customerService.createCustomer(customer);
+                    this.customerService.createCustomer(customer);
                     res.status(201);
                     return customer;
                 } catch (JsonProcessingException e) {
@@ -41,7 +41,7 @@ public class CustomerController {
             //get customer by id
             get("/:id", (req, res) -> {
                 int id = Integer.parseInt(req.params(":id"));
-                Customer customer = customerService.getCustomer(id);
+                Customer customer = this.customerService.getCustomer(id);
                 if (customer != null) return customer;
                 res.status(400);
                 return "Consumidor com ID:" + id + "não encontrado";
@@ -53,7 +53,7 @@ public class CustomerController {
                     String body = req.body().replace("address","mainAddress");
                     Customer customer = objectMapper.readValue(body, Customer.class);
                     customer.setId(id);
-                    customer = customerService.updateCustomer(customer);
+                    customer = this.customerService.updateCustomer(customer);
                     return customer;
                 } catch (JsonProcessingException e) {
                     e.printStackTrace();
@@ -64,7 +64,7 @@ public class CustomerController {
             //delete customer by id
             delete("/:id", (req, res) -> {
                 int id = Integer.parseInt(req.params(":id"));
-                customerService.deleteCustumer(id);
+                this.customerService.deleteCustumer(id);
                 res.status(204);
                 return "Sucesso : Removido com sucesso";
             },json());

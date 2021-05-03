@@ -20,7 +20,7 @@ public class Customer {
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
@@ -28,7 +28,7 @@ public class Customer {
     }
 
     public String getCpf() {
-        return cpf;
+        return this.cpf;
     }
 
     public void setCpf(String cpf) {
@@ -36,7 +36,7 @@ public class Customer {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -44,7 +44,7 @@ public class Customer {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
@@ -52,7 +52,7 @@ public class Customer {
     }
 
     public String getGender() {
-        return gender;
+        return this.gender;
     }
 
     public void setGender(String gender) {
@@ -60,7 +60,7 @@ public class Customer {
     }
 
     public Date getBirthDate() {
-        return birthDate;
+        return this.birthDate;
     }
 
     public void setBirthDate(Date birthDate) {
@@ -68,7 +68,7 @@ public class Customer {
     }
 
     public ArrayList<Address> getAddresses() {
-        return addresses;
+        return this.addresses;
     }
 
     public void setAddresses(ArrayList<Address> addresses) {
@@ -76,7 +76,7 @@ public class Customer {
     }
 
     public Address getMainAddress() {
-        return mainAddress;
+        return this.mainAddress;
     }
 
     public void setMainAddress(Address address) {
@@ -84,7 +84,7 @@ public class Customer {
     }
 
     public TimeStamp getTimeStamp() {
-        return timeStamp;
+        return this.timeStamp;
     }
 
     public void setTimeStamp(TimeStamp timeStamp) {
