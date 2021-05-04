@@ -116,8 +116,8 @@ public class AddressPersistence extends Persistence implements AddressService {
         }
         query += " WHERE ID = ?";
         this.preparementUpdate(query);
-        this.preparedStatement.setInt(1, address.getId());
-        this.preparedStatement.execute();
+        preparedStatement.setInt(1, address.getId());
+        preparedStatement.execute();
         close();
         return address;
     }
@@ -126,16 +126,16 @@ public class AddressPersistence extends Persistence implements AddressService {
     public boolean deleteAddress(int id) throws SQLException {
         String query = "Delete FROM ADDRESS WHERE ID = ?";
         this.preparementUpdate(query);
-        this.preparedStatement.setInt(1, id);
-        return this.preparedStatement.execute();
+        preparedStatement.setInt(1, id);
+        return preparedStatement.execute();
     }
     public int getIdMainAddress(int customerID) throws SQLException {
         String query = "SELECT ID FROM ADDRESS WHERE CUSTOMERID = ? AND MAIN = TRUE";
         this.preparementGet(query);
-        this.preparedStatement.setInt(1, customerID);
+        preparedStatement.setInt(1, customerID);
         this.get();
-        if (this.result.next()) {
-            return this.result.getInt("ID");
+        if (result.next()) {
+            return result.getInt("ID");
         }
         return 0;
     }

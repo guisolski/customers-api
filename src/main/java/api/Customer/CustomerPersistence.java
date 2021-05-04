@@ -68,19 +68,19 @@ public class CustomerPersistence extends Persistence implements CustomerService 
 
         this.preparementUpdate(query);
         //add values on query
-        this.preparedStatement.setString(1, customer.getName());
-        this.preparedStatement.setString(2, customer.getEmail());
-        this.preparedStatement.setString(3, customer.getCpf());
-        this.preparedStatement.setString(4, customer.getGender());
-        this.preparedStatement.setDate(5, customer.getBirthDate());
-        this.preparedStatement.setDate(6, customer.getTimeStamp().getCreatedAt());
-        this.preparedStatement.setDate(7, customer.getTimeStamp().getUpdateAt());
+        preparedStatement.setString(1, customer.getName());
+        preparedStatement.setString(2, customer.getEmail());
+        preparedStatement.setString(3, customer.getCpf());
+        preparedStatement.setString(4, customer.getGender());
+        preparedStatement.setDate(5, customer.getBirthDate());
+        preparedStatement.setDate(6, customer.getTimeStamp().getCreatedAt());
+        preparedStatement.setDate(7, customer.getTimeStamp().getUpdateAt());
         //execute query
         this.executeUpdate();
-        if (this.result.next()) {
-            customer.setId(this.result.getInt(1));
+        if (result.next()) {
+            customer.setId(result.getInt(1));
             customer.getMainAddress().setCustomerID(customer.getId());
-            customer.setMainAddress(this.addressService.createAddress(customer.getMainAddress()));
+            customer.setMainAddress(addressService.createAddress(customer.getMainAddress()));
         }
         close();
         return customer;
@@ -105,25 +105,25 @@ public class CustomerPersistence extends Persistence implements CustomerService 
         query += " WHERE ID = ?";
 
         this.preparementUpdate(query);
-        this.preparedStatement.setInt(1, customer.getId());
-        this.preparedStatement.execute();
+        preparedStatement.setInt(1, customer.getId());
+        preparedStatement.execute();
         close();
         if(customer.getAddresses() != null)
             //Addresses necessary have Id inplace
             for(Address address : customer.getAddresses())
-                address = this.addressService.updateAddress(address);
+                address = addressService.updateAddress(address);
         if(customer.getMainAddress() != null){
             //get ID to MainAddress
-            customer.getMainAddress().setId(this.addressService.getIdMainAddress(customer.getId()));
+            customer.getMainAddress().setId(addressService.getIdMainAddress(customer.getId()));
             //Update MainAddress
-            customer.setMainAddress(this.addressService.updateAddress(customer.getMainAddress()));
+            customer.setMainAddress(addressService.updateAddress(customer.getMainAddress()));
         }
         return customer;
     }
     public boolean deleteCustumer(int id) throws SQLException {
         String query = "DELETE FROM CUSTOMER WHERE ID = ?";
         this.preparementUpdate(query);
-        this.preparedStatement.setInt(1, id);
+        preparedStatement.setInt(1, id);
         return preparedStatement.execute();
     }
 
@@ -141,7 +141,7 @@ public class CustomerPersistence extends Persistence implements CustomerService 
     private void setAddresses(Customer customer) throws SQLException {
         Map<String,String> parameters = new LinkedHashMap<>();
         parameters.put("MAIN","FALSE");
-        customer.setAddresses(this.addressService.getAllAddresses(customer.getId(),parameters));
-        customer.setMainAddress(this.addressService.getMainAddres(customer.getId(), true));
+        customer.setAddresses(addressService.getAllAddresses(customer.getId(),parameters));
+        customer.setMainAddress(addressService.getMainAddres(customer.getId(), true));
     }
 }
