@@ -1,4 +1,4 @@
-package api.Address;
+package com.github.guisolski.customerApi.Address;
 
 import java.sql.SQLException;
 import java.util.List;

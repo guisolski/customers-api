@@ -1,4 +1,4 @@
-package api.util;
+package com.github.guisolski.customerApi.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

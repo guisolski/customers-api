@@ -1,15 +1,13 @@
-package api.Address;
+package com.github.guisolski.customerApi.Address;
 
 
-import api.Customer.Customer;
-import api.Persistence;
-import api.util.TimeStamp;
+import com.github.guisolski.customerApi.Persistence;
+import com.github.guisolski.customerApi.util.TimeStamp;
 
 import java.lang.reflect.Field;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class AddressPersistence extends Persistence implements AddressService {

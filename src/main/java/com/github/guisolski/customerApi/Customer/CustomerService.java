@@ -1,4 +1,4 @@
-package api.Customer;
+package com.github.guisolski.customerApi.Customer;
 
 import java.sql.SQLException;
 import java.util.List;

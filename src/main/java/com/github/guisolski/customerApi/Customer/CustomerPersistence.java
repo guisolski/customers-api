@@ -1,11 +1,10 @@
-package api.Customer;
+package com.github.guisolski.customerApi.Customer;
 
-import api.Address.Address;
-import api.Address.AddressPersistence;
-import api.Persistence;
-import api.util.TimeStamp;
+import com.github.guisolski.customerApi.Address.Address;
+import com.github.guisolski.customerApi.Address.AddressPersistence;
+import com.github.guisolski.customerApi.Persistence;
+import com.github.guisolski.customerApi.util.TimeStamp;
 import com.google.inject.Inject;
-import org.apache.logging.log4j.core.util.ArrayUtils;
 
 import java.lang.reflect.Field;
 import java.sql.ResultSet;

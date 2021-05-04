@@ -1,4 +1,4 @@
-package api.util;
+package com.github.guisolski.customerApi.util;
 
 import java.sql.Date;
 import java.util.Calendar;

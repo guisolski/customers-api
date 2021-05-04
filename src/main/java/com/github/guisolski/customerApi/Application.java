@@ -1,7 +1,7 @@
-package api;
+package com.github.guisolski.customerApi;
 
-import api.Address.AddressController;
-import api.Customer.CustomerController;
+import com.github.guisolski.customerApi.Address.AddressController;
+import com.github.guisolski.customerApi.Customer.CustomerController;
 import com.google.inject.Singleton;
 
 @Singleton

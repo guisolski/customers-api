@@ -1,6 +1,6 @@
-package api.Address;
+package com.github.guisolski.customerApi.Address;
 
-import api.util.TimeStamp;
+import com.github.guisolski.customerApi.util.TimeStamp;
 import com.google.inject.Inject;
 
 public class Address {

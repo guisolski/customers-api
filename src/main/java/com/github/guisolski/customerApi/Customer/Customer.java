@@ -1,7 +1,7 @@
-package api.Customer;
+package com.github.guisolski.customerApi.Customer;
 
-import api.Address.Address;
-import api.util.TimeStamp;
+import com.github.guisolski.customerApi.Address.Address;
+import com.github.guisolski.customerApi.util.TimeStamp;
 import com.google.inject.Inject;
 
 import java.sql.Date;

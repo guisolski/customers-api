@@ -1,4 +1,4 @@
-package api;
+package com.github.guisolski.customerApi;
 import java.sql.*;
 
 public class Persistence {
