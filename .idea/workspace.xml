@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31a9f9b5-1b36-4e31-a5f2-d493173a7055" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/AppInjector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/DAO/AddressDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/DAO/CustomerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/DAO/DAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Mapper/AddressMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Mapper/CustomerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/customers-api.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Address/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Model/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Address/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Controller/AddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Address/AddressPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Persistence/AddressPersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Address/AddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Model/AddressService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Customer/CustomerPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Persistence/CustomerPersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Model/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Persistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/guisolski/customerApi/Persistence/Persistence.java" afterDir="false" />
-    </list>
+    <list default="true" id="31a9f9b5-1b36-4e31-a5f2-d493173a7055" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
