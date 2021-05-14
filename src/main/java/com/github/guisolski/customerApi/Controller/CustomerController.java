@@ -1,25 +1,28 @@
-package com.github.guisolski.customerApi.Customer;
+package com.github.guisolski.customerApi.Controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.github.guisolski.customerApi.Model.Customer;
+import com.github.guisolski.customerApi.Persistence.CustomerPersistence;
 import com.github.guisolski.customerApi.util.JsonUntil;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import spark.Spark;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import static spark.Spark.*;
 
 @Singleton
 public class CustomerController {
     @Inject
-    private static final CustomerPersistence customerService = new CustomerPersistence();
+    private CustomerPersistence customerService;
 
     public CustomerController() {
         path("/customers", () -> {
             //get all customers
             Spark.get("", (req, res) -> {
-                ArrayList<Customer> customers =  customerService.getAllCustomers(req.queryMap().toMap());
+                //req.queryMap().toMap();
+                List<Customer> customers =  customerService.getAllCustomers(new Customer());
                 return  customers;
             }, JsonUntil.json());
             //add new customer

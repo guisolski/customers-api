@@ -1,29 +1,28 @@
-package com.github.guisolski.customerApi.Address;
+package com.github.guisolski.customerApi.Controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.github.guisolski.customerApi.Model.Address;
+import com.github.guisolski.customerApi.Persistence.AddressPersistence;
 import com.github.guisolski.customerApi.util.JsonUntil;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import spark.Spark;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
+import java.util.List;
 
 import static spark.Spark.*;
 
 @Singleton
 public class AddressController {
     @Inject
-    private final AddressPersistence addressService;
+    private AddressPersistence addressService;
 
     public AddressController() {
-
-        this.addressService = new AddressPersistence();
         path("/customers/:customerID/addresses", () -> {
             //get all addresses
             Spark.get("", (req, res) -> {
                 int customerID = Integer.parseInt(req.params(":customerID"));
-                LinkedHashMap<String,String> parameters = new LinkedHashMap<String, String>();
-                ArrayList<Address> address = this.addressService.getAllAddresses(customerID,parameters);
+                List<Address> address = this.addressService.getAllAddresses(customerID);
                 if (address != null) return address;
                 res.status(204);
                 return "Não foi encontrado nenhum endereço";
@@ -33,19 +32,19 @@ public class AddressController {
                     int customerID = Integer.parseInt(req.params(":customerID"));
                     Address address = JsonUntil.objectMapper.readValue(req.body(), Address.class);
                     address.setCustomerID(customerID);
-                    this.addressService.createAddress(address);
+                    addressService.createAddress(address);
                     res.status(201);
                     return address;
-                } catch (Exception e) {
+                } catch (JsonProcessingException e) {
                     e.printStackTrace();
                     res.status(400);
-                    return "{code : 'create_address', description : 'Parameter errados'";
+                    return "error : 'Failed to Create'";
                 }
             }, JsonUntil.json());
             Spark.get("/:id",(req, res) -> {
                 int customerID = Integer.parseInt(req.params(":customerID"));
                 int id = Integer.parseInt(req.params(":id"));
-                Address address = this.addressService.getAddress(customerID,id,null);
+                Address address = this.addressService.getAddress(customerID,id);
                 if (address != null) return address;
                 res.status(204);
                 return "Não foi encontrado nenhum endereço";

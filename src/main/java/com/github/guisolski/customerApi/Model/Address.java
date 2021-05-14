@@ -1,16 +1,20 @@
-package com.github.guisolski.customerApi.Address;
+package com.github.guisolski.customerApi.Model;
 
 import com.github.guisolski.customerApi.util.TimeStamp;
 import com.google.inject.Inject;
 
 public class Address {
+    private int id,customerID;
     private String state, city, neighborhood, street, additionalInformation, zipCode;
     private Boolean main;
-    private int id, customerID, number;
+    private int number;
     @Inject
     private TimeStamp timeStamp = new TimeStamp();
 
     public Address() {
+    }
+    public Address(Integer customerID) {
+        this.customerID = customerID;
     }
 
     public String getState() {

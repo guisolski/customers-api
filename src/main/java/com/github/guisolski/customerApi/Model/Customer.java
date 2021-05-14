@@ -1,6 +1,5 @@
-package com.github.guisolski.customerApi.Customer;
+package com.github.guisolski.customerApi.Model;
 
-import com.github.guisolski.customerApi.Address.Address;
 import com.github.guisolski.customerApi.util.TimeStamp;
 import com.google.inject.Inject;
 
@@ -16,7 +15,19 @@ public class Customer {
     @Inject
     private TimeStamp timeStamp = new TimeStamp();
 
-    public Customer() {
+    public Customer(){
+    }
+    public Customer(int id, String cpf, String name, String email, String gender, Date birthDate,
+                    ArrayList<Address> addresses, Address mainAddress, TimeStamp timeStamp) {
+        this.id = id;
+        this.cpf = cpf;
+        this.name = name;
+        this.email = email;
+        this.gender = gender;
+        this.birthDate = birthDate;
+        this.addresses = addresses;
+        this.mainAddress = mainAddress;
+        this.timeStamp = timeStamp;
     }
 
     public int getId() {
